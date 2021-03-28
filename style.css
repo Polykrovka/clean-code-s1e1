@@ -33,7 +33,7 @@
 .task {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 .task-wrapper {
   display: flex;
@@ -128,7 +128,7 @@
   width: 226px;
 }
 .list__item > .all-inputs[type="text"] {
-  width: 226px
+  width: 226px;
 }
 .list__item > .delete:hover {
   color: #cf2323;
@@ -152,12 +152,12 @@
 /* Edit Task */
 
 .ul .list__item .all-inputs[type=text] {
-  display: none
+  display: none;
 }
 
 .ul .list__item.edit-mode .all-inputs[type=text] {
   display: inline-block;
-  width: 320px                              
+  width: 320px;                          
   /* добавил ширины, что бы компенсировать съехавшее. */
 }
 
