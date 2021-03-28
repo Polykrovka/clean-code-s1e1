@@ -15,7 +15,7 @@
   width: 100%;
 }
 .header 
-.more-inf {
+.header__link {
   font-family: fantasy, cursive;
 }
 
@@ -40,15 +40,16 @@
 .task-wrapper {
   display: flex;
 }
-.ul {
+.list {
   margin: 0;
   padding: 0px;
 }
 .list__item, 
-.headings {
+.main__headings {
   list-style: none;
 }
-.all-inputs, 
+.top-section__input,
+.list__input, 
 .list__button{
   outline: none;
 }
@@ -67,7 +68,7 @@
 
 /* Heading */
 
-.headings,
+.main__headings,
 .task[for="new-task"] {
   color: #333;
   font-weight: 700;
@@ -78,7 +79,8 @@
   margin: 0;
   text-transform: uppercase;
 }
-.all-inputs[type="text"] {
+.top-section__input,
+.list__input[type="text"] {
   margin: 0 10px;
   font-size: 18px;
   line-height: 18px;
@@ -89,9 +91,11 @@
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
-  
 }
-.all-inputs[type="text"]:focus {
+.top-section__input {
+    margin: 0;
+}
+.list__input[type="text"]:focus {
   color: #333;
 }
 
@@ -101,10 +105,10 @@
   display: block;
   margin: 0 0 20px;
 }
-.all-inputs#new-task {
+.list__input#new-task {
   width: 318px;
 }
-#top-section-for-adding-element > .list__button:hover {
+#top-section > .list__button:hover {
   color: #0fc57c;
 }
 
@@ -122,16 +126,13 @@
   vertical-align: middle;
 }
 
-/* .list__item > .all-inputs[type="checkbox"] {
-  margin: 0 10px;
-} */
 .list__item > .task {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-.list__item > .all-inputs[type="text"] {
+.list__item > .list__input[type="text"] {
   width: 226px;
 }
 .list__item > .delete:hover {
@@ -149,7 +150,7 @@
 
 /* Completed */
 
-.ul#completed-tasks 
+.list#completed-tasks 
 .task {
   text-decoration: line-through
   color: #888;
@@ -157,20 +158,20 @@
 
 /* Edit Task */
 
-.ul .list__item 
-.all-inputs[type=text] {
+.list .list__item 
+.list__input[type=text] {
   display: none;
 }
 
-.ul 
+.list 
 .list__item.edit-mode 
-.all-inputs[type=text] {
+.list__input[type=text] {
   display: inline-block;
   width: 320px;                          
   /* добавил ширины, что бы компенсировать съехавшее. */
 }
 
-.ul 
+.list 
 .list__item.edit-mode 
 .task {
   display: none;
